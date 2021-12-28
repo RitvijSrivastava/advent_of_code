@@ -2,9 +2,9 @@
 
 ## How to run ?
 
-- Navigate to the 'Day' that you want to run in the terminal. For example. if I want to run code Day 1, I will go to `advent_of_code/2021/DayOne`
-- Run `cat <input_file> | cabal run` to run the code. Replace `<input_file>` with the name of your input file.
-***NOTE: Code may contain lines for both Part 1 and Part 2. Make sure to comment out the lines for the parts that you DON'T intend to run***
+- Navigate to the 'Day' that you want to run in the terminal. For example, if I want to run code Day 1, I will go to `advent_of_code/2021/DayOne`
+- Run `cat <input_file> | cabal run` to run the code. Replace `<input_file>` with the name of your input file. For example, if I want to run "part1.txt", I'll run `cat part1.txt | cabal run` 
+***NOTE: Code may contain lines for both Part 1 and Part 2. Make sure to comment out the lines for the parts that you DON'T intend to run.***
 
 ## Checklist
 
