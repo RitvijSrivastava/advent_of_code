@@ -1,11 +1,11 @@
 module Main where
 
-valsLargerThanPreviousVals :: [Int] -> Int
-valsLargerThanPreviousVals [] = 0
-valsLargerThanPreviousVals [_x] = 0
-valsLargerThanPreviousVals (x : y : ys)
-  | y > x = 1 + valsLargerThanPreviousVals (y : ys)
-  | otherwise = valsLargerThanPreviousVals (y : ys)
+valsLargerThanPreviousVal :: [Int] -> Int
+valsLargerThanPreviousVal [] = 0
+valsLargerThanPreviousVal [_x] = 0
+valsLargerThanPreviousVal (x : y : ys)
+  | y > x = 1 + valsLargerThanPreviousVal (y : ys)
+  | otherwise = valsLargerThanPreviousVal (y : ys)
 
 
 -- Create a new list, which at each index contains the sum of consecutive triplets.
@@ -20,8 +20,12 @@ main = do
   fileContents <- getContents
   let list = (\x -> read x :: Int) <$> words fileContents
 
-  let resultForPartOne = valsLargerThanPreviousVals list
+  -- Driver code for Part 1.
+  -- Comment the two lines below when running Part 2.
+  let resultForPartOne = valsLargerThanPreviousVal list
   print resultForPartOne
 
-  let resultForPartTwo = valsLargerThanPreviousVals $ alterList list
+  -- Driver code for Part 2.
+  -- Comment the two lines above when running Part 1.
+  let resultForPartTwo = valsLargerThanPreviousVal $ alterList list
   print resultForPartTwo
